@@ -2,25 +2,7 @@ const columns = document.querySelectorAll('.column');
 let draggedTask = null;
 let editingTask = null;
 
-// تسک‌های اولیه
-// const defaultTasks = {
-//     todo: [
-//         { text: 'طراحی صفحه اصلی سایت مشتری', status: 'todo' },
-//         { text: 'بررسی مشکلات سرور اصلی', status: 'todo' },
-//         { text: 'آماده‌سازی ارائه برای تیم فروش', status: 'todo' },
-//         { text: 'به‌روزرسانی پکیج‌های پروژه', status: 'todo' }
-//     ],
-//     doing: [
-//         { text: 'کدنویسی ماژول پرداخت آنلاین', status: 'doing' },
-//         { text: 'رفع باگ فرم ثبت‌نام کاربران', status: 'doing' },
-//         { text: 'تست عملکرد اپلیکیشن موبایل', status: 'doing' }
-//     ],
-//     done: [
-//         { text: 'ارسال ایمیل گزارش هفتگی به مدیر', status: 'done' },
-//         { text: 'طراحی لوگوی جدید شرکت', status: 'done' },
-//         { text: 'تهیه بکاپ دیتابیس', status: 'done' }
-//     ]
-// };
+// src : https://github.com/im-mahan
 
 // لود تسک‌ها
 function loadTasks() {
