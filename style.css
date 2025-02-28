@@ -1,0 +1,29 @@
+
+body {
+    font-family: 'Vazirmatn', sans-serif;
+}
+
+.task {
+    cursor: grab;
+}
+
+.task.dragging {
+    opacity: 0.5;
+    transform: scale(1.05);
+}
+
+.column {
+    transition: all 0.3s ease;
+}
+
+.column.drag-over {
+    border: 2px dashed #60a5fa;
+    background-color: rgba(96, 165, 250, 0.1);
+}
+
+span{
+    direction: rtl;
+    text-align: center;
+    max-width: 200px;
+    margin: auto;
+}

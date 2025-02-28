@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My ToDo's</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vazirmatn@33.0.3/Vazirmatn-font-face.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 text-white min-h-screen p-6">
+    <div class="max-w-5xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-8 text-blue-300 drop-shadow-lg">مدیریت تسک‌ها</h1>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <!-- ستون در حال انجام -->
+            <div class="column bg-gray-800 p-4 rounded-xl shadow-2xl" data-status="doing">
+                <h2 class="text-xl text-center font-semibold text-blue-400 mb-4">در حال انجام</h2>
+                <div class="tasks min-h-[200px]"></div>
+            </div>
+
+            <!-- ستون انجام شده -->
+            <div class="column bg-gray-800 p-4 rounded-xl shadow-2xl" data-status="done">
+                <h2 class="text-xl text-center font-semibold text-green-400 mb-4">انجام شده</h2>
+                <div class="tasks min-h-[200px]"></div>
+            </div>
+
+            <!-- ستون انجام نشده -->
+            <div class="column bg-gray-800 p-4 rounded-xl shadow-2xl" data-status="todo">
+                <h2 class="text-xl text-center font-semibold text-red-400 mb-4">انجام نشده</h2>
+                <div class="tasks min-h-[200px]"></div>
+            </div>
+        </div>
+
+        <!-- فرم اضافه کردن تسک -->
+        <div class="mt-8 flex justify-center">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-2xl w-full max-w-md">
+                <input dir="rtl" type="text" id="new-task"
+                    class="w-full p-3 bg-gray-700 border-none rounded-md text-white focus:ring-2 focus:ring-blue-500 mb-4"
+                    placeholder="تسک جدید وارد کنید...">
+                <button id="add-task"
+                    class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">اضافه کن</button>
+            </div>
+        </div>
+
+        <!-- مدال ویرایش -->
+        <div id="edit-modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+            <div class="bg-gray-800 p-6 rounded-xl shadow-2xl w-full max-w-md">
+                <h3 class="text-xl font-semibold text-blue-400 mb-4">ویرایش تسک</h3>
+                <input type="text" id="edit-task-text"
+                    class="w-full p-3 bg-gray-700 border-none rounded-md text-white focus:ring-2 focus:ring-blue-500 mb-4">
+                <div class="flex space-x-4">
+                    <button id="save-edit"
+                        class="w-full bg-blue-600 text-white py-2 rounded-md hover:bg-blue-700 transition">ذخیره</button>
+                    <button id="cancel-edit"
+                        class="w-full bg-gray-600 text-white py-2 rounded-md hover:bg-gray-700 transition">لغو</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script src="app.js"></script>
+</body>
+</html>
